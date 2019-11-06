@@ -1,0 +1,154 @@
+.images{
+	display: none;
+}
+
+#res{
+	width: 90%;	
+	margin-left: 5%;
+	margin-right: 5%;
+	
+}
+
+#nivel1, #nivel2{	
+	height: 650px;
+}
+
+#nivel2{	
+	height: 500px;
+}
+
+#grafica, #nivelesCompentencia{
+	float: left;
+	height: 550px;	
+	padding: 30px;
+	width: 100%;	
+}
+
+#lienzo{
+	padding-left: 8%;
+	padding-top: 5%;
+}
+
+#grafica{
+	width: 40%;	
+}
+
+#nivelesCompentencia{
+	width: 60%;
+}
+
+.gr{
+	height: 300px;
+	float: left;
+	width: 20%;
+}
+
+.gr h4{
+	margin-left: 20%;
+	text-align: center;
+}
+
+
+#nivel3{
+	width: 80%;	
+	margin-left: 10%;
+	margin-right: 10%;	
+	height: 380px;
+}
+
+.tec{
+	background: #00765F;
+	color: white;
+}
+
+.ped{
+	background: #E76D24;
+	color: white;
+}	
+
+.com{
+	background: #553C7B;
+	color: white;
+}
+
+.ges{
+	background: #899617;
+	color: white;
+}
+
+.inv{
+	background: #0095C0;
+	color: white;
+}
+
+#botones{
+	margin-top: 20px;	
+	margin-bottom: 20px;	
+}
+
+#panelResultados, #main {
+	display: none;
+}
+
+
+/* --------------------------------------- */
+/* ----- Slider Banner */
+/* --------------------------------------- */
+
+.slider_banner {
+	overflow: hidden;
+	z-index: 1000;
+	position: relative;
+}
+
+/* --------------------------------------- */
+/* ----- Slider Info */
+/* --------------------------------------- */
+
+
+
+/* Seccion Informacion */
+
+.slider_info .informacion article {
+	
+	overflow: hidden;
+	
+}
+
+.slider_info .informacion article .slide{
+	background: #fff;
+	width: 100%;
+	left: 100%;
+	padding: 20px 80px;
+	position: absolute;
+}
+/* Slider Flechas */
+
+.slider_info .flecha-info {
+	font-size: 25px;
+	line-height: 25px;
+	color: #555555;
+	position: absolute;
+	top:85%;
+	z-index: 1000;
+}
+
+.slider_info .flecha-info:hover {
+	color:#ce1b28;
+}
+
+.slider_info .flecha-info.anterior {
+	left: 10px;
+}
+
+.slider_info .flecha-info.siguiente {
+	right: 10px;
+}
+
+
+
+
+.slider_info .informacion .botones .active {
+	background: #555555;
+}
+
