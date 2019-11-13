@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-router.get('/login', (req, res) => {
-    res.render('links/login');
-});
+const db = require('../database');
 
 router.get('/', (req, res) => {
     res.render('links/home');
@@ -13,12 +10,17 @@ router.get('/profile', (req, res) => {
     res.render('links/profile');
 });
 
-router.get('/encuesta', (req, res) => {
-    res.render('links/encuesta');
+router.get('/encuestaHerramientas', (req, res) => {
+    res.render('links/encuestaHerramientas');
 });
 
-router.post('/add', (req, res) => {
-    res.send('received');
+router.get('/encuestaCompetencias', (req, res) => {
+    res.render('links/encuestaCompetencias');
+});
+
+router.post('/encuestaHerramientas', async (req, res, next) => {    
+    console.log(req.body);
+    
 });
 
 module.exports = router;

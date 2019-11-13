@@ -1,0 +1,157 @@
+
+
+
+<div class="container p-5">
+    
+    <section id="perfil-editar">
+        <form action="/perfil/editar" method="POST">
+            <div class="row">
+                <div class="col-md-4 align-self-center">
+                    
+                        <label for="imagen">Imagen de Perfil</label>
+                        <img src="/images/user-icon.png" alt="" height="200px" name="imagen" class="rounded-circle">                  
+                        <hr>
+                        <input type="file" class="inputFile" id="inputFile" name="inputFile" hidden="hidden">
+                        <button id="btnInputFile" class="btn btn-light">Cambiar Foto de Perfil</button>
+                        <span id="spanInputFile">No se ha elegido un archivo</span>
+                                
+                </div>
+
+                <div class="col-md-8">           
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" placeholder="Nombre" class="form-control" autofocus>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" placeholder="Apellido" class="form-control">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="cedula">Documento de Identidad</label>
+                            <input type="text" name="cedula" placeholder="Número de Identidad" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="genero">Género</label>                        
+                            <select name="selecGenero">
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                                <option>Binario</option>
+                                <option>Transexual</option>
+                                <option>Genero Variable</option>
+                                <option>Pansexual</option>
+                                <option>Inter-sexual</option>
+                                <option>Tercer Género de Dos Espíritus</option>
+                                <option>Helicoptero Apache</option>
+                                <option>Otra cosa pa' que no se ofenda</option>
+                            </select>
+                        </div>                            
+                    </div>
+                    <hr>
+                    <div class="col-md-12">
+                        <label for="correo">Dirección de correo Electrónico</label>
+                        <input type="text" name="correo" placeholder="Correo Electrónico" class="form-control">
+                    </div>
+                </div>                
+            </div>
+            <hr>
+            <ul>
+                <li>
+                    <label for="institucion">Institución: </label>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            
+                            <select name="selecInstitucion">    
+                                {{#each instituciones}}                            
+                                    <option value="{{k_id}}">{{n_nombre}}</option>
+                                {{/each}}                            
+                            </select>
+                              
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <label>¿Otra?</label>
+                            <input type="radio" name="inst" id="inst-otra-si" value="Si">
+                            <label for="inst-otra-si">Si</label>
+                            <input type="radio" name="inst" id="inst-otra-no" value="No" checked>
+                            <label for="inst-otra-no">No</label>
+
+                            <div class="otro"  id="txtInstitucion">
+                                <label for="otroInstitucion">Nombre Institucion</label>
+                                <input type="text" name="otroInstitucion" placeholder="¿Cuál?">
+                                <label for="txtInstitucionDescripcion">Descripción</label>
+                                <textarea  name="txtInstitucionDescripcion" rows="2"></textarea>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <label for="asignatura">Área de Especialización: </label>
+                    <div class="row align-items-center">                    
+                        <div class="col-md-6">
+                            <select name="selecArea">
+                                {{#each areas}}
+                                    <option  value="{{k_id}}">{{n_nombre}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>¿Otra?</label>
+                            <input type="radio" name="area" id="area-otra-si" value="Si">
+                            <label for="area-otra-si">Si</label>
+                            <input type="radio" name="area" id="area-otra-no" value="No" checked>
+                            <label for="area-otra-no">No</label>
+                            <div class="otro"  id="txtArea">
+                                <label for="otroArea">Nombre del Área</label>
+                                <input type="text" name="otroArea" placeholder="¿Cuál?">
+                                <label for="txtAreaDescripcion">Descripción</label>
+                                <textarea name="txtAreaDescripcion" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>                
+                </li>
+                <hr>
+                <li>
+                    <label for="ciclo">Ciclo Propedéutico: </label>
+                    <div class="row align-items-center">                    
+                        <div class="col-md-6">
+                            <select name="selecCiclo">
+                                {{#each ciclos}}
+                                    <option value="{{k_id}}">{{n_nombre}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>¿Otra?</label>
+                            <input type="radio" name="cicl" id="cicl-otra-si" value="Si">
+                            <label for="cicl-otra-si">Si</label>
+                            <input type="radio" name="cicl" id="cicl-otra-no" value="No" checked>
+                            <label for="cicl-otra-no">No</label>
+                            <div class="otro"  id="txtCiclo">
+                                <label for="otroCiclo">Nombre del Ciclo Propedéutico</label>
+                                <input type="text" name="otroCiclo" placeholder="¿Cuál?">
+                                <label for="txtCicloDescripcion">Descripción</label>
+                                <textarea name="txtCicloDescripcion" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>                
+                </li>                    
+            </ul>            
+        
+                
+    
+            <button id="guardarCambios" class="primary">Guardar Cambios</button>
+            <a href="/perfil">
+                <input href="/perfil" type="button" value="Cancelar" class="secundary"/>
+            </a>
+        </form>
+        
+            
+    </section>
+    
+</div>

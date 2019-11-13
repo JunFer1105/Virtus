@@ -1,13 +1,13 @@
 {
   "name": "Virtus",
-  "version": "1.0.0",
-  "description": "npm",
+  "version": "1.0.1",
+  "description": "ntegración de las TIC en educación técnica, tecnológica y de ingeniería, para docentes, frente al cambio de paradigmas educativos.",
   "main": "index.js",
   "scripts": {
     "start": "node src/"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["MinEducacion, MinTic, Competencias Tic"],
+  "author": "Juan Fernando Arango, David Santoyo",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

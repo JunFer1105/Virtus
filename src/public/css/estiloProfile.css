@@ -1,0 +1,19 @@
+#perfil-editar, #perfil-normal {
+    display: none;
+}
+
+#txtInstitucion, #txtArea, #txtCiclo{
+    display: none;
+}
+
+#btnInputFile {
+    height: 40px;    
+}
+
+#spanInputFile{
+    display: none;
+}
+
+.keyId {
+    display: none;
+}
